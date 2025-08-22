@@ -1,6 +1,6 @@
 package com.my.exercises;
 
-public class Modifiers {
+public class Modifiers_1 {
 
     public static void main(String[] args) {
         System.out.println("Non-access modifiers \n" +

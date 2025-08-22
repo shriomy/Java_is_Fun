@@ -1,6 +1,6 @@
 package com.my.exercises;
 
-public class AbstractClassCall {
+public class AbstractClassCall_2 {
     public static void main(String[] args) {
         Student myObj = new Student();
         System.out.println("Name: " + myObj.fname);
