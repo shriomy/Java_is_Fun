@@ -5,6 +5,12 @@ public class Main {
         System.out.println("hello world");
         System.out.println(5);
         System.out.println(5 + 10);
+
+        OuterClass myOuter = new OuterClass();
+        OuterClass.InnerClass myInner = myOuter.new InnerClass();
+        myOuter.setX(20);
+        myInner.setY(20);
+        System.out.println(myInner.getY() + myOuter.getX());
     }
 }
 
