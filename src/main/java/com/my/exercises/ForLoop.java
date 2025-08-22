@@ -16,8 +16,8 @@ public class ForLoop {
         printLeftPyramid(height);
         printCenteredPyramid(height);
         printRightPyramid(height);
-        System.out.println("\nFor-Each Loop Example:");
         forEachLoopExample();;
+        breakExample();
     }
 
     public static void printLeftPyramid(int height) {
@@ -67,9 +67,31 @@ public class ForLoop {
     public static void rightInvertedPyramid(){}
 
     public static void forEachLoopExample() {
+        System.out.println("\nFor-Each Loop Example:");
         String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
         for (String i : cars) {
             System.out.print(i + ", ");
         }
     }
+
+    public static void breakExample() {
+        System.out.println("\n\nBreak Example:");
+        for (int i = 0; i < 10; i++) {
+            if (i == 4) {
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+
+    public static void continueExample() {
+        System.out.println("\nContinue Example: breaks one iteration in the loop and continues");
+        for (int i = 0; i < 10; i++) {
+            if (i == 4) {
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
+
 }
