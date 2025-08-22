@@ -16,6 +16,9 @@ public class ForLoop {
         printLeftPyramid(height);
         printCenteredPyramid(height);
         printRightPyramid(height);
+        invertedPyramid(height);
+        leftInvertedPyramid(height);
+        rightInvertedPyramid(height);
         forEachLoopExample();;
         breakExample();
     }
@@ -60,11 +63,48 @@ public class ForLoop {
         }
     }
 
-    public static void invertedPyramid(){}
+    public static void invertedPyramid(int height){
+        System.out.println("\nInverted Pyramid");
+        int columns = height + 1;
+        for (int row = 0; row < height; row++) {
+            System.out.println();
+            for (int i = 0; i < row; i++) {
+                System.out.print(" ");
+            }
+            columns--;
+            for (int star = 0; star < columns; star++) {
+                System.out.print("* ");
+            }
+        }
+    }
 
-    public static void leftInvertedPyramid(){}
+    public static void leftInvertedPyramid(int height){
+        System.out.println("\nLeft-Aligned Inverted Pyramid:");
+        int columns = height;
+        for (int row = 0; row < height; row++) {
+            for (int i = 0; i < columns; i++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+            columns--;
+        }
+    }
 
-    public static void rightInvertedPyramid(){}
+    public static void rightInvertedPyramid(int height){
+        System.out.println("\nRight-Aligned Inverted Pyramid:");
+        int columns = height;
+        for (int rows = 0; rows < height; rows++) {
+            for (int spaces = 0; spaces < rows; spaces++) {
+                System.out.print("  ");
+            }
+            for (int j = 0; j < columns; j++) {
+                System.out.print("* ");
+            }
+            columns--;
+            System.out.println();
+        }
+
+    }
 
     public static void forEachLoopExample() {
         System.out.println("\nFor-Each Loop Example:");
